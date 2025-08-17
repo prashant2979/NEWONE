@@ -19,7 +19,7 @@ function Hero() {
         </AnchorLink>
 
         <a
-          href="/path/to/your_resume.pdf"
+          href="https://drive.google.com/drive/home"
           className="hero-resume"
           target="_blank"
           rel="noopener noreferrer"
