@@ -1,0 +1,190 @@
+/* ================= Container ================= */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+}
+
+/* ================= Title ================= */
+.about-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-title h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ab3e34, #2575fc);
+    background-clip: text;           /* Standard */
+    -webkit-background-clip: text;   /* Safari/Chrome */
+    color: transparent;              /* Required for gradient text */
+    transition: transform 0.5s ease;
+}
+
+
+.about-title img {
+    width: 50px;
+    height: 50px;
+}
+
+.about-title:hover h1 {
+    transform: scale(1.05);
+}
+
+/* ================= Profile & Description ================= */
+.about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* Left: Profile Image */
+.about-left img {
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-left img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 10px 25px rgba(106, 17, 203, 0.6);
+}
+
+/* Right: Text & Skills */
+.about-right {
+    max-width: 600px;
+}
+
+.about-right p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for paragraphs */
+.about-right p:hover {
+    color: #6a11cb;
+    transform: translateY(-3px);
+}
+
+/* ================= Skills ================= */
+.about-skill {
+    margin-top: 20px;
+}
+
+.bour-skill {
+    margin-bottom: 15px;
+}
+
+.bour-skill p {
+    margin-bottom: 5px;
+}
+
+/* Skill bars */
+.bour-skill hr {
+    height: 8px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    transition: width 1.5s ease-in-out;
+}
+
+/* Example widths */
+.bour-skill.react hr { width: 80%; }
+.bour-skill.javascript hr { width: 85%; }
+.bour-skill.dsa hr { width: 70%; }
+
+/* ================= Achievements ================= */
+.about-achivement {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.about-achivement-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease, color 0.5s ease;
+    cursor: default;
+}
+
+.about-achivement-item:hover {
+    transform: translateY(-10px);
+    color: #99e67f;
+}
+
+.about-achivement-item h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #6a11cb;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.about-achivement-item:hover h1 {
+    transform: scale(1.2);
+    color: #2575fc;
+}
+
+.about-achivement-item p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* ================= Responsiveness ================= */
+@media (max-width: 1024px) {
+    .about {
+        margin: 60px 50px;
+        gap: 60px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .about-right {
+        text-align: center;
+    }
+
+    .about-achivement {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        margin: 40px 20px;
+        gap: 40px;
+    }
+
+    .about-title h1 {
+        font-size: 2rem;
+    }
+
+    .about-left img {
+        width: 150px;
+    }
+
+    .bour-skill hr {
+        height: 6px;
+    }
+
+    .about-achivement-item h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-achivement-item p {
+        font-size: 0.8rem;
+    }
+}

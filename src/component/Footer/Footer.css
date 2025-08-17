@@ -1,0 +1,145 @@
+.footer {
+  width: 100%;
+  background: #121212;
+  color: #fff;
+  padding: 50px 10%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Top Section */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-top-left img {
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.footer-top-left img:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.footer-top-left p {
+  color: #aaa;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-top-left p:hover {
+  color: #ffcc70;
+}
+
+/* Social Icon Container */
+.footer-top-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-icon-wrapper {
+  border-radius: 50%;
+  padding: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon-wrapper:hover {
+  transform: scale(1.2);
+}
+
+.social-icon-wrapper.linkedin:hover {
+  background-color: #0a66c2; /* LinkedIn Blue */
+}
+
+.social-icon-wrapper.instagram:hover {
+  background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); /* Instagram Gradient */
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+/* Divider */
+hr {
+  border: 0.5px solid #333;
+  margin: 25px 0;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-left {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Links inside footer bottom */
+.footer-bottom-right p {
+  display: inline-block;
+  margin-left: 20px;
+  color: #aaa;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Remove underline from <a> links */
+.footer-bottom-right p a.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-right p a.footer-link:hover {
+  color: #ff8c00;
+  text-decoration: none; /* No underline on hover */
+}
+
+/* Remove underline effect on <p> hover for non-links */
+.footer-bottom-right p:hover::after {
+  width: 100%;
+}
+
+.footer-bottom-right p:hover {
+  color: #ff8c00;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .footer-bottom-right p {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}

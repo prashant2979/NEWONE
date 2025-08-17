@@ -1,0 +1,117 @@
+.skill {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 10%;
+  background: #0f0f0f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.skill-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.skill-title h1 {
+  font-size: 3rem;
+  color: #ffcc70;
+}
+
+.skill-title img {
+  width: 200px;
+  opacity: 0.15;
+  position: absolute;
+}
+
+/* Row */
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Card */
+.skill-card {
+  width: 320px;
+  height: 220px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #00d9ff;
+  z-index: 2;
+  position: relative;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== Popup Details ===== */
+.popup {
+  position: absolute;
+  inset: 0; /* covers entire card */
+  background: rgba(30, 30, 30, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.skill-card:hover .popup {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 5;
+}
+
+.popup p {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.popup p:hover {
+  transform: scale(1.05);
+  color: #ff0080;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skill-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill-card {
+    width: 90%;
+    height: auto;
+    padding: 25px;
+  }
+}

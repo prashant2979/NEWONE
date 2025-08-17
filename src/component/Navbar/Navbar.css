@@ -1,0 +1,125 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 170px;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo styling */
+.nav-logo {
+  height: 50px; /* adjust as needed */
+}
+
+/* Hamburger & close menu icons */
+.menu-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: none; /* visible only on mobile */
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.3s ease;
+}
+
+/* Each nav item */
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  color: #333;
+}
+
+/* Anchor link style */
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+/* Underline image */
+.nav-underline {
+  width: 60px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Highlight active nav item text */
+.nav-menu li.active .nav-link {
+  color: #d57b0d; /* gold-ish highlight */
+}
+
+/* Connect button */
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, rgb(213, 123, 13), rgb(222, 33, 65));
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-weight: 600;
+  color: white;
+  user-select: none;
+}
+
+.nav-connect:hover {
+  transform: scale(1.06);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Show hamburger icon on mobile */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide the connect button on small screens if needed */
+  .nav-connect {
+    display: none;
+  }
+
+  /* Vertical mobile menu - hidden by default */
+  .nav-menu {
+    position: absolute;
+    top: 70px; /* below navbar */
+    right: 20px;
+    background: white;
+    flex-direction: column;
+    width: 180px;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    gap: 15px;
+    transition: max-height 0.4s ease;
+    z-index: 100;
+  }
+
+  /* Show menu when open */
+  .nav-menu.open {
+    max-height: 400px; /* enough to show all links */
+  }
+
+  /* Mobile nav items styling */
+  .nav-menu li {
+    padding: 10px 20px;
+    gap: 3px;
+  }
+
+  .nav-underline {
+    width: 40px;
+  }
+}
