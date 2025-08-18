@@ -1,12 +1,12 @@
 import React from 'react';
 import './Hero.css';
-import profile_img from '../../../assets/profile_img.svg';
+import profile from '../../../assets/profile.jpeg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 function Hero() {
   return (
     <div id="home" className="hero">
-      <img src={profile_img} alt="profile" className="hero-img" />
+      <img src={profile} alt="profile" className="hero-img" />
       
       <h1 className="hero-title">
         <span className="highlight">I’m Prashant Choudhary</span>

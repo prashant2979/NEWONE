@@ -1,6 +1,6 @@
 import React from 'react';
 import theme_pattern from '../../assets/theme_pattern.svg';
-import profile_img from '../../assets/about_profile.svg';
+import profile2 from '../../assets/profile2.jpeg';
 import './About.css';  // Make sure the path is correct
 
 function About() {
@@ -17,7 +17,7 @@ function About() {
       <div className="about-section">
 
         <div className="about-left">
-          <img src={profile_img} alt="Prashant Choudhary" />
+          <img src={profile2} alt="Prashant Choudhary" />
         </div>
 
         <div className="about-right">
